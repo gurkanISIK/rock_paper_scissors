@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <style>
+      .mybut {
+        height: 100px;
+        width: 110px;
+        background-color: rgb(155, 160, 227) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Rock Paper Scissors</h2>
+      <div class="col">
+        <div>
+          <!--rock button-->
+          <button
+            onclick="const myArray = ['rock', 'paper', 'scissors']; 
+           randomIndex =Math.floor(Math.random()* myArray.length);
+           randomElement =myArray[randomIndex];
+          console.log(randomElement);
+
+          if(randomElement == 'rock'){
+            ties+=1;
+            document.getElementById('result1').innerHTML = 'Tie.';
+            document.getElementById('result2').innerHTML = 'You:✊✊:Computer ';
+            document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            
+           else if(randomElement == 'paper'){
+            losses+=1;
+            document.getElementById('result1').innerHTML = 'You Lose.';
+            document.getElementById('result2').innerHTML = 'You:✊✋:Computer ';
+            document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            else{
+                wins+=1;
+                document.getElementById('result1').innerHTML = 'You Win!';
+            document.getElementById('result2').innerHTML = 'You:✊✌️:Computer ';
+            document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            "
+            class="mybut btn rounded-pill"
+            title="Taş (Rock)"
+          >
+            ✊
+          </button>
+          <!--paper button-->
+          <button
+            onclick=" myArray = ['rock', 'paper', 'scissors']; 
+          randomIndex =Math.floor(Math.random()* myArray.length);
+          randomElement =myArray[randomIndex];
+          console.log(randomElement);
+          if(randomElement == 'paper'){
+            ties+=1;
+            document.getElementById('result1').innerHTML = 'Tie.';
+            document.getElementById('result2').innerHTML = 'You:✋✋:Computer ';
+            document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            else if(randomElement == 'paper'){
+            losses+=1;
+            document.getElementById('result1').innerHTML = 'You Lose.';
+            document.getElementById('result2').innerHTML = 'You:✊✋:Computer ';
+            document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            else{
+                wins+=1;
+                document.getElementById('result1').innerHTML = 'You Win!';
+            document.getElementById('result2').innerHTML = 'You:✊✌️:Computer ';
+            document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            "
+            class="mybut btn rounded-pill"
+            title="kagit (paperl)"
+          >
+            ✋
+          </button>
+
+          <!--Scissors Button-->
+          <button
+            onclick=" myArray = ['rock', 'paper', 'scissors']; 
+
+          const randomIndex =Math.floor(Math.random()* myArray.length);
+          const randomElement =myArray[randomIndex];
+          console.log(randomElement);
+          if(randomElement == 'scissors'){
+            ties+=1;
+            document.getElementById('result1').innerHTML = 'Tie.';
+            document.getElementById('result2').innerHTML = 'You:✌️✌️:Computer ';
+            document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            else if(randomElement == 'paper'){
+                wins+=1;
+                document.getElementById('result1').innerHTML = 'You Win!';
+            document.getElementById('result2').innerHTML = 'You:✌️✋:Computer ';
+            document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            
+            else{
+                losses+=1;
+            document.getElementById('result1').innerHTML = 'You Lose.';
+            document.getElementById('result2').innerHTML = 'You:✌️✊:Computer ';
+            document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            "
+            class="mybut btn rounded-pill"
+            title="makas (scissors)"
+          >
+            ✌️
+          </button>
+        </div>
+      </div>
+      <div class="mt-5">
+          <p id="result1" class="me-4" style="font-weight: 600"></p>
+          <p id="result2" style="font-weight: 600" class="me-4"></p>
+
+        <p id="scores" style="font-weight: 600" class="me-5"></p>
+      </div>
+      <button
+        class="btn btn-danger"
+        onclick="
+        wins=0;
+        losses=0;
+        ties=0;
+        document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;
+      "
+      >
+        Reset Score
+      </button>
+    </div>
+    <script>
+      let result;
+      let wins = 0;
+      let losses = 0;
+      let ties = 0;
+    </script>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
