@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>game</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+
     <style>
+      body{
+        background-color: rgb(222, 188, 103);
+      }
+
       .mybut {
         height: 100px;
         width: 110px;
@@ -14,7 +19,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container text-center ">
       <h2>Rock Paper Scissors</h2>
       <div class="col">
         <div>
@@ -23,7 +28,6 @@
             onclick="const myArray = ['rock', 'paper', 'scissors']; 
            randomIndex =Math.floor(Math.random()* myArray.length);
            randomElement =myArray[randomIndex];
-          console.log(randomElement);
 
           if(randomElement == 'rock'){
             ties+=1;
@@ -41,6 +45,8 @@
                 document.getElementById('result1').innerHTML = 'You Win!';
             document.getElementById('result2').innerHTML = 'You:✊✌️:Computer ';
             document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+document.querySelector('button.btn-danger').style.display = 'inline-block';
+
             "
             class="mybut btn rounded-pill"
             title="Taş (Rock)"
@@ -68,6 +74,7 @@
                 document.getElementById('result1').innerHTML = 'You Win!';
             document.getElementById('result2').innerHTML = 'You:✊✌️:Computer ';
             document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            document.querySelector('button.btn-danger').style.display = 'inline-block';
             "
             class="mybut btn rounded-pill"
             title="kagit (paperl)"
@@ -98,6 +105,7 @@
             document.getElementById('result1').innerHTML = 'You Lose.';
             document.getElementById('result2').innerHTML = 'You:✌️✊:Computer ';
             document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;}
+            document.querySelector('button.btn-danger').style.display = 'inline-block';
             "
             class="mybut btn rounded-pill"
             title="makas (scissors)"
@@ -113,12 +121,17 @@
         <p id="scores" style="font-weight: 600" class="me-5"></p>
       </div>
       <button
+        style="display:none;"
         class="btn btn-danger"
         onclick="
         wins=0;
         losses=0;
         ties=0;
         document.getElementById('scores').innerHTML=`Wins:${wins},Losses:${losses},Ties:${ties}`;
+        document.getElementById('result1').innerHTML=' ';
+        document.getElementById('result2').innerHTML=' ';
+        document.getElementById('scores').innerHTML=' ';
+        this.style.display = 'none';
       "
       >
         Reset Score
